@@ -419,9 +419,6 @@ body {
   overflow: hidden;
 }
 
-.swatch:hover {
-  flex: 1.5;
-}
 
 .remove-btn {
   position: absolute;
