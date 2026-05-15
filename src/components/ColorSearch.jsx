@@ -1,7 +1,16 @@
 import { useState, useRef, useEffect } from 'react'
 import { searchColors } from '../data/colorDatabase'
 
-const CATEGORY_LABELS = { brands: 'Brand', flowers: 'Flower', nature: 'Nature', food: 'Food' }
+const CATEGORY_LABELS = {
+  brands: 'Brand',
+  flowers: 'Flower',
+  nature: 'Nature',
+  food: 'Food',
+  gems: 'Gem',
+  space: 'Space',
+  art: 'Art',
+  fashion: 'Fashion',
+}
 
 export default function ColorSearch({ onSelect }) {
   const [query, setQuery] = useState('')
@@ -60,7 +69,7 @@ export default function ColorSearch({ onSelect }) {
           ref={inputRef}
           type="text"
           className="search-input"
-          placeholder="Search brands, flowers, nature…"
+          placeholder="Search brands, nature, gems, space, art…"
           value={query}
           onChange={handleChange}
           onKeyDown={handleKeyDown}

@@ -1,5 +1,18 @@
-import { useState } from 'react'
-import { getContrastColor } from '../utils/colorUtils'
+import { useState, Fragment } from 'react'
+import { getContrastColor, hexToOklch, oklchToHex, oklchToString } from '../utils/colorUtils'
+
+function midpointColor(hex1, hex2) {
+  const a = hexToOklch(hex1)
+  const b = hexToOklch(hex2)
+  const l = (a.l + b.l) / 2
+  const c = (a.c + b.c) / 2
+  let diff = b.h - a.h
+  if (diff > 180) diff -= 360
+  if (diff < -180) diff += 360
+  const h = ((a.h + diff / 2) % 360 + 360) % 360
+  const hex = oklchToHex(l, c, h)
+  return { hex, info: oklchToString(l, c, h), isBase: false, label: null }
+}
 
 function ColorSwatch({ color }) {
   const [copied, setCopied] = useState(false)
@@ -35,7 +48,7 @@ function ColorSwatch({ color }) {
   )
 }
 
-export default function PaletteDisplay({ palette, onSave }) {
+export default function PaletteDisplay({ palette, onSave, onInsertColor }) {
   const [saved, setSaved] = useState(false)
 
   function handleSave() {
@@ -56,7 +69,16 @@ export default function PaletteDisplay({ palette, onSave }) {
     <div className="palette-display">
       <div className="swatches-row">
         {palette.map((color, i) => (
-          <ColorSwatch key={i} color={color} />
+          <Fragment key={i}>
+            <ColorSwatch color={color} />
+            {i < palette.length - 1 && (
+              <button
+                className="insert-btn"
+                onClick={() => onInsertColor(i + 1, midpointColor(color.hex, palette[i + 1].hex))}
+                title="Add a color between these two"
+              >+</button>
+            )}
+          </Fragment>
         ))}
       </div>
       <div className="palette-footer">

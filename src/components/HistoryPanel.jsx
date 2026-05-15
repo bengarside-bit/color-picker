@@ -1,5 +1,3 @@
-import { getContrastColor } from '../utils/colorUtils'
-
 function MiniPalette({ entry, onClick, onDelete }) {
   return (
     <div className="history-entry">

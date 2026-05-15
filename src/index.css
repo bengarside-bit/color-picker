@@ -349,34 +349,22 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.harmony-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-}
-
-.harmony-btn {
+.harmony-select {
+  width: 100%;
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  padding: 0.5rem 0.6rem;
-  cursor: pointer;
-  transition: all 0.15s;
-  text-align: left;
-}
-
-.harmony-btn:hover {
-  border-color: var(--accent);
   color: var(--text);
+  font-size: 0.85rem;
+  padding: 0.55rem 0.7rem;
+  cursor: pointer;
+  outline: none;
+  appearance: auto;
+  transition: border-color 0.15s;
 }
 
-.harmony-btn.active {
-  background: rgba(196, 103, 43, 0.12);
+.harmony-select:focus {
   border-color: var(--accent);
-  color: var(--accent);
-  font-weight: 600;
 }
 
 .generate-btn {
@@ -433,6 +421,33 @@ body {
 
 .swatch:hover {
   flex: 1.5;
+}
+
+.insert-btn {
+  width: 0;
+  flex-shrink: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.18);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.swatches-row:hover .insert-btn {
+  width: 28px;
+  opacity: 1;
+}
+
+.insert-btn:hover {
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .swatch--base::after {

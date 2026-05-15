@@ -40,6 +40,10 @@ export default function App() {
     setPalette(generatePalette(baseColor, harmony))
   }
 
+  function handleInsertColor(index, newColor) {
+    setPalette((prev) => [...prev.slice(0, index), newColor, ...prev.slice(index)])
+  }
+
   function handleSave() {
     if (!palette.length) return
     const entry = {
@@ -108,7 +112,7 @@ export default function App() {
         </section>
 
         <section className="right-panel">
-          <PaletteDisplay palette={palette} onSave={handleSave} />
+          <PaletteDisplay palette={palette} onSave={handleSave} onInsertColor={handleInsertColor} />
           <HistoryPanel
             history={history}
             onRestore={handleRestore}

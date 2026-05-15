@@ -28,6 +28,14 @@ export const COLOR_DATABASE = [
   { name: 'Lyft Pink',         hex: '#FF00BF', category: 'brands',  tags: ['lyft', 'rideshare', 'pink', 'transport'] },
   { name: 'IKEA Blue',         hex: '#0058A3', category: 'brands',  tags: ['ikea', 'furniture', 'blue', 'swedish'] },
   { name: 'Peloton Red',       hex: '#D42026', category: 'brands',  tags: ['peloton', 'fitness', 'red'] },
+  { name: 'Figma Purple',      hex: '#A259FF', category: 'brands',  tags: ['figma', 'design', 'tool', 'purple'] },
+  { name: 'TikTok Teal',       hex: '#69C9D0', category: 'brands',  tags: ['tiktok', 'social', 'video', 'teal'] },
+  { name: 'Coca-Cola Red',     hex: '#F40009', category: 'brands',  tags: ['coca cola', 'coke', 'soda', 'drink', 'red'] },
+  { name: 'Tesla Red',         hex: '#E82127', category: 'brands',  tags: ['tesla', 'car', 'electric', 'ev', 'red'] },
+  { name: 'Zoom Blue',         hex: '#2D8CFF', category: 'brands',  tags: ['zoom', 'video', 'meeting', 'call', 'blue'] },
+  { name: 'Canva Purple',      hex: '#7D2AE8', category: 'brands',  tags: ['canva', 'design', 'purple', 'creative'] },
+  { name: 'Duolingo Green',    hex: '#58CC02', category: 'brands',  tags: ['duolingo', 'language', 'learning', 'green'] },
+  { name: 'PayPal Blue',       hex: '#003087', category: 'brands',  tags: ['paypal', 'payments', 'blue', 'finance'] },
 
   // ── Flowers ───────────────────────────────────────────────────
   { name: 'Rose Red',          hex: '#C41E3A', category: 'flowers', tags: ['rose', 'red', 'floral', 'romantic'] },
@@ -45,6 +53,13 @@ export const COLOR_DATABASE = [
   { name: 'Zinnia Orange',     hex: '#FF5F1F', category: 'flowers', tags: ['zinnia', 'orange', 'summer', 'floral'] },
   { name: 'Tulip Red',         hex: '#DC143C', category: 'flowers', tags: ['tulip', 'red', 'spring', 'dutch', 'floral'] },
   { name: 'Wisteria',          hex: '#C9A0DC', category: 'flowers', tags: ['wisteria', 'purple', 'lavender', 'floral', 'climbing'] },
+  { name: 'Dahlia Magenta',    hex: '#D63A6E', category: 'flowers', tags: ['dahlia', 'pink', 'magenta', 'floral', 'bold'] },
+  { name: 'Jasmine Yellow',    hex: '#F8DE7E', category: 'flowers', tags: ['jasmine', 'yellow', 'floral', 'fragrant', 'warm'] },
+  { name: 'Hibiscus',          hex: '#B5485D', category: 'flowers', tags: ['hibiscus', 'red', 'pink', 'tropical', 'floral'] },
+  { name: 'Bluebell',          hex: '#5072A7', category: 'flowers', tags: ['bluebell', 'blue', 'wildflower', 'spring', 'floral'] },
+  { name: 'Clover Green',      hex: '#3EA055', category: 'flowers', tags: ['clover', 'green', 'lucky', 'field', 'floral'] },
+  { name: 'Magnolia',          hex: '#EDE8D0', category: 'flowers', tags: ['magnolia', 'cream', 'white', 'floral', 'elegant'] },
+  { name: 'Aster Purple',      hex: '#7B4F9E', category: 'flowers', tags: ['aster', 'purple', 'autumn', 'fall', 'floral'] },
 
   // ── Nature ────────────────────────────────────────────────────
   { name: 'Ocean Blue',        hex: '#006994', category: 'nature',  tags: ['ocean', 'sea', 'water', 'blue', 'marine'] },
@@ -62,8 +77,17 @@ export const COLOR_DATABASE = [
   { name: 'Sky Blue',          hex: '#87CEEB', category: 'nature',  tags: ['sky', 'blue', 'clear', 'daylight'] },
   { name: 'Terra Cotta',       hex: '#E2725B', category: 'nature',  tags: ['terra cotta', 'earth', 'clay', 'orange', 'red'] },
   { name: 'Storm Gray',        hex: '#708090', category: 'nature',  tags: ['storm', 'gray', 'cloud', 'overcast', 'moody'] },
+  { name: 'Desert Sand',       hex: '#EDC9AF', category: 'nature',  tags: ['desert', 'sand', 'warm', 'earth', 'beige'] },
+  { name: 'Canyon Red',        hex: '#C25B3F', category: 'nature',  tags: ['canyon', 'red', 'rock', 'southwest', 'earth'] },
+  { name: 'Rainforest',        hex: '#2D6A4F', category: 'nature',  tags: ['rainforest', 'jungle', 'green', 'deep', 'tropical'] },
+  { name: 'Glacier Blue',      hex: '#7BC5E0', category: 'nature',  tags: ['glacier', 'ice', 'blue', 'cold', 'arctic'] },
+  { name: 'Obsidian',          hex: '#3D3635', category: 'nature',  tags: ['obsidian', 'volcanic', 'dark', 'black', 'stone'] },
+  { name: 'Savanna Gold',      hex: '#C19A6B', category: 'nature',  tags: ['savanna', 'gold', 'africa', 'dry', 'warm'] },
+  { name: 'Tundra Gray',       hex: '#8B9BAE', category: 'nature',  tags: ['tundra', 'gray', 'arctic', 'cold', 'muted'] },
+  { name: 'Redwood',           hex: '#A45A52', category: 'nature',  tags: ['redwood', 'tree', 'forest', 'red', 'bark'] },
+  { name: 'Dusk Pink',         hex: '#C48B9F', category: 'nature',  tags: ['dusk', 'pink', 'sunset', 'sky', 'warm'] },
 
-  // ── Food ──────────────────────────────────────────────────────
+  // ── Food & Drink ──────────────────────────────────────────────
   { name: 'Strawberry',        hex: '#FC5A8D', category: 'food',    tags: ['strawberry', 'red', 'pink', 'fruit', 'sweet'] },
   { name: 'Blueberry',         hex: '#4F86C6', category: 'food',    tags: ['blueberry', 'blue', 'purple', 'fruit'] },
   { name: 'Mango',             hex: '#FF8C00', category: 'food',    tags: ['mango', 'orange', 'tropical', 'fruit', 'summer'] },
@@ -74,9 +98,84 @@ export const COLOR_DATABASE = [
   { name: 'Mustard',           hex: '#E1A100', category: 'food',    tags: ['mustard', 'yellow', 'condiment', 'warm'] },
   { name: 'Peach',             hex: '#FFAB76', category: 'food',    tags: ['peach', 'orange', 'pink', 'fruit', 'soft'] },
   { name: 'Lime Green',        hex: '#32CD32', category: 'food',    tags: ['lime', 'green', 'citrus', 'bright', 'fruit'] },
+  { name: 'Cinnamon',          hex: '#D2691E', category: 'food',    tags: ['cinnamon', 'brown', 'spice', 'warm', 'baking'] },
+  { name: 'Pistachio',         hex: '#93C572', category: 'food',    tags: ['pistachio', 'green', 'nut', 'pale', 'soft'] },
+  { name: 'Plum',              hex: '#8E4585', category: 'food',    tags: ['plum', 'purple', 'fruit', 'rich', 'deep'] },
+  { name: 'Caramel',           hex: '#C68642', category: 'food',    tags: ['caramel', 'brown', 'sweet', 'warm', 'dessert'] },
+  { name: 'Honey',             hex: '#FFC30B', category: 'food',    tags: ['honey', 'yellow', 'golden', 'sweet', 'amber'] },
+  { name: 'Grape',             hex: '#6F2DA8', category: 'food',    tags: ['grape', 'purple', 'fruit', 'vine', 'wine'] },
+  { name: 'Paprika',           hex: '#E95B3E', category: 'food',    tags: ['paprika', 'spice', 'red', 'orange', 'warm'] },
+  { name: 'Vanilla Cream',     hex: '#F3E5AB', category: 'food',    tags: ['vanilla', 'cream', 'yellow', 'soft', 'dessert', 'baking'] },
+  { name: 'Matcha',            hex: '#7BA05B', category: 'food',    tags: ['matcha', 'green', 'tea', 'japanese', 'earthy'] },
+  { name: 'Burgundy Wine',     hex: '#800020', category: 'food',    tags: ['burgundy', 'wine', 'red', 'deep', 'rich', 'drink'] },
+  { name: 'Champagne',         hex: '#F7E7CE', category: 'food',    tags: ['champagne', 'gold', 'cream', 'celebrate', 'drink', 'pale'] },
+  { name: 'Lemon',             hex: '#FFF44F', category: 'food',    tags: ['lemon', 'yellow', 'citrus', 'bright', 'fruit', 'sour'] },
+
+  // ── Gemstones ─────────────────────────────────────────────────
+  { name: 'Ruby',              hex: '#9B111E', category: 'gems',    tags: ['ruby', 'red', 'gemstone', 'precious', 'deep'] },
+  { name: 'Sapphire',          hex: '#0F52BA', category: 'gems',    tags: ['sapphire', 'blue', 'gemstone', 'precious', 'royal'] },
+  { name: 'Emerald',           hex: '#50C878', category: 'gems',    tags: ['emerald', 'green', 'gemstone', 'precious', 'bright'] },
+  { name: 'Amethyst',          hex: '#9966CC', category: 'gems',    tags: ['amethyst', 'purple', 'gemstone', 'crystal', 'violet'] },
+  { name: 'Topaz',             hex: '#FFC87C', category: 'gems',    tags: ['topaz', 'orange', 'yellow', 'gemstone', 'warm'] },
+  { name: 'Jade',              hex: '#00A86B', category: 'gems',    tags: ['jade', 'green', 'gemstone', 'asian', 'stone'] },
+  { name: 'Garnet',            hex: '#733635', category: 'gems',    tags: ['garnet', 'red', 'dark', 'gemstone', 'deep'] },
+  { name: 'Opal',              hex: '#A8C3BC', category: 'gems',    tags: ['opal', 'iridescent', 'gemstone', 'teal', 'soft'] },
+  { name: 'Onyx',              hex: '#353935', category: 'gems',    tags: ['onyx', 'black', 'dark', 'gemstone', 'stone'] },
+  { name: 'Pearl',             hex: '#EAE0C8', category: 'gems',    tags: ['pearl', 'cream', 'white', 'gemstone', 'elegant'] },
+  { name: 'Citrine',           hex: '#E4D00A', category: 'gems',    tags: ['citrine', 'yellow', 'gemstone', 'bright', 'warm'] },
+  { name: 'Turquoise Stone',   hex: '#40E0D0', category: 'gems',    tags: ['turquoise', 'teal', 'gemstone', 'southwest', 'blue'] },
+  { name: 'Malachite',         hex: '#0BDA51', category: 'gems',    tags: ['malachite', 'green', 'gemstone', 'stone', 'bright'] },
+  { name: 'Lapis Blue',        hex: '#26619C', category: 'gems',    tags: ['lapis', 'lazuli', 'blue', 'gemstone', 'ancient'] },
+  { name: 'Rose Quartz',       hex: '#F7CAC9', category: 'gems',    tags: ['rose quartz', 'pink', 'gemstone', 'crystal', 'soft', 'blush'] },
+
+  // ── Space ─────────────────────────────────────────────────────
+  { name: 'Mars Red',          hex: '#C1440E', category: 'space',   tags: ['mars', 'red', 'planet', 'space', 'rust'] },
+  { name: 'Nebula Purple',     hex: '#8B2FC9', category: 'space',   tags: ['nebula', 'purple', 'space', 'galaxy', 'cosmic'] },
+  { name: 'Solar Gold',        hex: '#FFD700', category: 'space',   tags: ['solar', 'sun', 'gold', 'yellow', 'space', 'star'] },
+  { name: 'Deep Space',        hex: '#1B2A4A', category: 'space',   tags: ['space', 'dark', 'navy', 'deep', 'void', 'cosmos'] },
+  { name: 'Supernova Orange',  hex: '#FF6B35', category: 'space',   tags: ['supernova', 'orange', 'star', 'explosion', 'bright'] },
+  { name: 'Stardust Gold',     hex: '#C4A35A', category: 'space',   tags: ['stardust', 'gold', 'cosmic', 'warm', 'space'] },
+  { name: 'Lunar Gray',        hex: '#B0AFA8', category: 'space',   tags: ['moon', 'lunar', 'gray', 'silver', 'crater', 'space'] },
+  { name: 'Galaxy Blue',       hex: '#13274F', category: 'space',   tags: ['galaxy', 'blue', 'dark', 'space', 'milky way'] },
+  { name: 'Comet Blue',        hex: '#4FC1E9', category: 'space',   tags: ['comet', 'blue', 'ice', 'teal', 'space'] },
+  { name: 'Event Horizon',     hex: '#0D0221', category: 'space',   tags: ['black hole', 'dark', 'void', 'space', 'deep'] },
+  { name: 'Pulsar Pink',       hex: '#E040FB', category: 'space',   tags: ['pulsar', 'pink', 'magenta', 'star', 'space', 'cosmic'] },
+  { name: 'Neptune Blue',      hex: '#2B63A8', category: 'space',   tags: ['neptune', 'blue', 'planet', 'space', 'ocean'] },
+
+  // ── Art & Pigments ────────────────────────────────────────────
+  { name: 'Cerulean',          hex: '#2A52BE', category: 'art',     tags: ['cerulean', 'blue', 'pigment', 'paint', 'classic'] },
+  { name: 'Burnt Sienna',      hex: '#E97451', category: 'art',     tags: ['burnt sienna', 'orange', 'brown', 'earth', 'pigment', 'paint'] },
+  { name: 'Viridian',          hex: '#40826D', category: 'art',     tags: ['viridian', 'green', 'pigment', 'paint', 'classic'] },
+  { name: 'Cobalt Blue',       hex: '#0047AB', category: 'art',     tags: ['cobalt', 'blue', 'pigment', 'paint', 'classic', 'deep'] },
+  { name: 'Prussian Blue',     hex: '#003153', category: 'art',     tags: ['prussian blue', 'dark', 'blue', 'pigment', 'paint', 'navy'] },
+  { name: 'Yellow Ochre',      hex: '#CC7722', category: 'art',     tags: ['ochre', 'yellow', 'earth', 'pigment', 'paint', 'warm'] },
+  { name: 'Vermillion',        hex: '#E34234', category: 'art',     tags: ['vermillion', 'red', 'orange', 'pigment', 'paint', 'classic'] },
+  { name: 'Sepia',             hex: '#704214', category: 'art',     tags: ['sepia', 'brown', 'old', 'vintage', 'photograph', 'warm'] },
+  { name: 'Raw Umber',         hex: '#826644', category: 'art',     tags: ['raw umber', 'brown', 'earth', 'pigment', 'neutral'] },
+  { name: 'Cadmium Red',       hex: '#E30022', category: 'art',     tags: ['cadmium', 'red', 'pigment', 'paint', 'bold', 'primary'] },
+  { name: 'Titanium White',    hex: '#F0EDE8', category: 'art',     tags: ['titanium white', 'white', 'pigment', 'paint', 'neutral', 'bright'] },
+  { name: 'Ivory Black',       hex: '#231F20', category: 'art',     tags: ['ivory black', 'black', 'dark', 'pigment', 'paint'] },
+  { name: 'Phthalo Green',     hex: '#123524', category: 'art',     tags: ['phthalo', 'green', 'deep', 'pigment', 'paint', 'dark'] },
+  { name: 'Alizarin Crimson',  hex: '#E32636', category: 'art',     tags: ['alizarin', 'crimson', 'red', 'pigment', 'paint', 'deep'] },
+
+  // ── Fashion & Pantone ─────────────────────────────────────────
+  { name: 'Millennial Pink',   hex: '#F4C2C2', category: 'fashion', tags: ['millennial pink', 'pink', 'pastel', 'trend', 'soft'] },
+  { name: 'Viva Magenta',      hex: '#BB2649', category: 'fashion', tags: ['viva magenta', 'pantone', 'pink', 'red', 'bold', '2023'] },
+  { name: 'Classic Blue',      hex: '#0F4C81', category: 'fashion', tags: ['classic blue', 'pantone', 'navy', 'blue', '2020', 'timeless'] },
+  { name: 'Living Coral',      hex: '#FF6F61', category: 'fashion', tags: ['living coral', 'pantone', 'coral', 'orange', 'pink', '2019'] },
+  { name: 'Ultra Violet',      hex: '#5F4B8B', category: 'fashion', tags: ['ultra violet', 'pantone', 'purple', '2018', 'bold'] },
+  { name: 'Greenery',          hex: '#88B04B', category: 'fashion', tags: ['greenery', 'pantone', 'green', 'nature', '2017', 'fresh'] },
+  { name: 'Marsala',           hex: '#955251', category: 'fashion', tags: ['marsala', 'pantone', 'wine', 'red', 'brown', '2015'] },
+  { name: 'Serenity Blue',     hex: '#92A8D1', category: 'fashion', tags: ['serenity', 'blue', 'pantone', 'soft', 'calm', 'pastel', '2016'] },
+  { name: 'Peach Fuzz',        hex: '#FFBE98', category: 'fashion', tags: ['peach fuzz', 'pantone', 'peach', 'orange', 'soft', '2024'] },
+  { name: 'Mocha Mousse',      hex: '#A47864', category: 'fashion', tags: ['mocha mousse', 'pantone', 'brown', 'warm', 'neutral', '2025'] },
+  { name: 'Dusty Rose',        hex: '#DCAE96', category: 'fashion', tags: ['dusty rose', 'pink', 'muted', 'vintage', 'warm', 'neutral'] },
+  { name: 'Sage Green',        hex: '#B2AC88', category: 'fashion', tags: ['sage', 'green', 'muted', 'earthy', 'neutral', 'calm'] },
+  { name: 'Terracotta Clay',   hex: '#C8674A', category: 'fashion', tags: ['terracotta', 'clay', 'orange', 'earthy', 'warm', 'trend'] },
+  { name: 'Butter Yellow',     hex: '#F5DEB3', category: 'fashion', tags: ['butter', 'yellow', 'soft', 'pastel', 'warm', 'pale'] },
 ]
 
-const CATEGORY_ORDER = ['brands', 'flowers', 'nature', 'food']
+const CATEGORY_ORDER = ['brands', 'flowers', 'nature', 'food', 'gems', 'space', 'art', 'fashion']
 
 export function searchColors(query) {
   const q = query.toLowerCase().trim()
@@ -92,5 +191,5 @@ export function searchColors(query) {
     .filter(({ score }) => score > 0)
     .sort((a, b) => b.score - a.score || CATEGORY_ORDER.indexOf(a.color.category) - CATEGORY_ORDER.indexOf(b.color.category))
 
-  return scored.map(({ color }) => color).slice(0, 8)
+  return scored.map(({ color }) => color).slice(0, 10)
 }

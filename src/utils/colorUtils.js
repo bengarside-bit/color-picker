@@ -60,7 +60,7 @@ export function getContrastColor(hex) {
   return l > 0.58 ? '#1a1a1a' : '#ffffff'
 }
 
-function oklchToString(l, c, h) {
+export function oklchToString(l, c, h) {
   return `oklch(${(l * 100).toFixed(1)}% ${c.toFixed(3)} ${Math.round(h)}°)`
 }
 
@@ -99,13 +99,13 @@ const HARMONIES = {
   },
   designer: {
     label: 'Designer Kit',
-    description: 'Base + light neutral, dark neutral, accent, secondary',
-    offsets: [0, 0, 0, 180, 120],
-    lightnessMods: [0, 0, 0, 0.03, 0],
-    // Absolute L/C overrides bypass vibrant normalization — used for the tinted neutrals
-    lOverrides: [null, 0.95, 0.20, null, null],
-    cOverrides: [null, 0.015, 0.025, null, null],
-    swatchLabels: ['Base', 'Light', 'Dark', 'Accent', 'Secondary'],
+    description: 'Base + light tint, dark shade, close accent, supporting tone',
+    offsets: [0, 0, 0, 25, -20],
+    lightnessMods: [0, 0, 0, 0.04, -0.04],
+    // Light and dark use absolute L so they reliably bracket the base regardless of input
+    lOverrides: [null, 0.88, 0.32, null, null],
+    cOverrides: [null, 0.025, 0.04, null, null],
+    swatchLabels: ['Base', 'Light', 'Dark', 'Accent', 'Support'],
   },
 }
 
@@ -121,21 +121,17 @@ export function generatePalette(baseHex, harmonyKey = 'analogous') {
   const { l, c, h } = hexToOklch(baseHex)
   const harmony = HARMONIES[harmonyKey] || HARMONIES.analogous
 
-  // Derived colors are normalized to a vibrant L/C range regardless of input darkness
-  const vibrantL = Math.min(Math.max(l, 0.52), 0.68)
-  const vibrantC = Math.max(c, 0.13)
-
   return harmony.offsets.map((offset, i) => {
     const newH = ((h + offset) % 360 + 360) % 360
 
     // Slot 0 always preserves the exact picked color; lOverrides/cOverrides bypass normalization
     const newL = harmony.lOverrides?.[i] != null
       ? harmony.lOverrides[i]
-      : i === 0 ? l : Math.max(0, Math.min(1, vibrantL + (harmony.lightnessMods?.[i] || 0)))
+      : Math.max(0, Math.min(1, l + (harmony.lightnessMods?.[i] || 0)))
 
     const newC = harmony.cOverrides?.[i] != null
       ? harmony.cOverrides[i]
-      : i === 0 ? c : vibrantC
+      : c
 
     const hex = oklchToHex(newL, newC, newH)
     return {

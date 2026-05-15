@@ -97,18 +97,15 @@ export default function ColorPicker({ baseColor, harmony, onColorChange, onHarmo
 
       <div className="harmony-section">
         <p className="section-label">Harmony Type</p>
-        <div className="harmony-grid">
+        <select
+          className="harmony-select"
+          value={harmony}
+          onChange={(e) => onHarmonyChange(e.target.value)}
+        >
           {HARMONY_TYPES.map(({ key, label, description }) => (
-            <button
-              key={key}
-              className={`harmony-btn ${harmony === key ? 'active' : ''}`}
-              onClick={() => onHarmonyChange(key)}
-              title={description}
-            >
-              {label}
-            </button>
+            <option key={key} value={key} title={description}>{label}</option>
           ))}
-        </div>
+        </select>
       </div>
 
       <button className="generate-btn" onClick={onGenerate}>
