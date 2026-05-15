@@ -14,7 +14,7 @@ function midpointColor(hex1, hex2) {
   return { hex, info: oklchToString(l, c, h), isBase: false, label: null }
 }
 
-function ColorSwatch({ color }) {
+function ColorSwatch({ color, onRemove, canRemove }) {
   const [copied, setCopied] = useState(false)
   const textColor = getContrastColor(color.hex)
 
@@ -35,6 +35,14 @@ function ColorSwatch({ color }) {
       onKeyDown={(e) => e.key === 'Enter' && handleCopy()}
       title="Click to copy hex"
     >
+      {canRemove && (
+        <button
+          className="remove-btn"
+          style={{ color: textColor, borderColor: textColor }}
+          onClick={(e) => { e.stopPropagation(); onRemove() }}
+          title="Remove this color"
+        >×</button>
+      )}
       <div className="swatch-labels" style={{ color: textColor }}>
         {color.label && (
           <span className="base-badge" style={{ borderColor: textColor, color: textColor }}>
@@ -48,7 +56,7 @@ function ColorSwatch({ color }) {
   )
 }
 
-export default function PaletteDisplay({ palette, onSave, onInsertColor }) {
+export default function PaletteDisplay({ palette, onSave, onInsertColor, onRemoveColor }) {
   const [saved, setSaved] = useState(false)
 
   function handleSave() {
@@ -70,7 +78,7 @@ export default function PaletteDisplay({ palette, onSave, onInsertColor }) {
       <div className="swatches-row">
         {palette.map((color, i) => (
           <Fragment key={i}>
-            <ColorSwatch color={color} />
+            <ColorSwatch color={color} onRemove={() => onRemoveColor(i)} canRemove={palette.length > 1} />
             {i < palette.length - 1 && (
               <button
                 className="insert-btn"
