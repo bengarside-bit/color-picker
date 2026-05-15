@@ -48,6 +48,20 @@ export default function App() {
     setPalette((prev) => prev.filter((_, i) => i !== index))
   }
 
+  function handleReorderColors(from, to) {
+    setPalette((prev) => {
+      const next = [...prev]
+      const [moved] = next.splice(from, 1)
+      next.splice(to, 0, moved)
+      return next
+    })
+  }
+
+  function handleUseAsBase(hex) {
+    setBaseColor(hex)
+    setPalette(generatePalette(hex, harmony))
+  }
+
   function handleSave() {
     if (!palette.length) return
     const entry = {
@@ -116,7 +130,7 @@ export default function App() {
         </section>
 
         <section className="right-panel">
-          <PaletteDisplay palette={palette} onSave={handleSave} onInsertColor={handleInsertColor} onRemoveColor={handleRemoveColor} />
+          <PaletteDisplay palette={palette} onSave={handleSave} onInsertColor={handleInsertColor} onRemoveColor={handleRemoveColor} onUseAsBase={handleUseAsBase} onReorderColors={handleReorderColors} />
           <HistoryPanel
             history={history}
             onRestore={handleRestore}
